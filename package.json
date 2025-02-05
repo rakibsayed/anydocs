@@ -1,0 +1,24 @@
+{
+  "name": "anydocs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+"scripts": {
+  "dev:web": "cd apps/web && npm run dev",
+  "dev:api": "cd apps/api && npx ts-node src/server.ts",
+  "dev": "concurrently \"npm run dev:web\" \"npm run dev:api\"",
+  "build": "cd apps/web && npm run build",
+  "lint": "cd apps/web && npm run lint"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "concurrently": "^9.1.2"
+  }
+}
